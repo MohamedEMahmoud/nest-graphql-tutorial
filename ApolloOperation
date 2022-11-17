@@ -1,0 +1,58 @@
+mutation{
+  CreateEmployee(employee: { firstName: "mohamed", lastName: "emad", designation: "Engineer", city: "Dakahlia", projectId: "18844eeb-dd3f-489e-8e94-f056e8735e70" }){
+    id;
+    firstName;
+    lastName;
+    designation;
+    city;
+  }
+}
+
+mutation{
+  createProject(createProjectInput: { name: "mard", code: 2 }){
+    id;
+    name;
+    code;
+  }
+}
+
+{
+    GetAllEmployees{
+    id;
+    firstName;
+    lastName;
+    designation;
+    city
+      project{
+      id;
+      name;
+
+    }
+  }
+}
+
+{
+    getAllProject{
+    id;
+    name;
+    code
+      employees{
+      id;
+      firstName;
+      lastName;
+    }
+  }
+}
+
+{
+  getProject(id: "18844eeb-dd3f-489e-8e94-f056e8735e70"){
+    id;
+    name;
+    code
+      employees{
+      id;
+      firstName;
+      lastName;
+    }
+  }
+}
